@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FloatingMenu" customModule="KitchenPal" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agx-nf-j3f">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="aDs-Q3-OIs" appends="YES" id="fz2-Wg-4gJ"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iuG-kH-d5M">
+                    <rect key="frame" x="346" y="828" width="60" height="60"/>
+                    <color key="backgroundColor" red="1" green="0.16730925260000001" blue="0.1571789485" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="8fz-rT-451"/>
+                        <constraint firstAttribute="width" constant="60" id="9AG-KI-Z2j"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="iuG-kH-d5M" secondAttribute="trailing" constant="8" id="8uB-05-ZLR"/>
+                <constraint firstAttribute="trailing" secondItem="agx-nf-j3f" secondAttribute="trailing" id="DkK-tl-0ws"/>
+                <constraint firstItem="agx-nf-j3f" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NIB-dj-SNd"/>
+                <constraint firstAttribute="bottom" secondItem="iuG-kH-d5M" secondAttribute="bottom" constant="8" id="Wcd-zj-65X"/>
+                <constraint firstItem="agx-nf-j3f" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hRJ-35-2Lq"/>
+                <constraint firstAttribute="bottom" secondItem="agx-nf-j3f" secondAttribute="bottom" id="wRl-hK-1Pu"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backgroundButton" destination="iuG-kH-d5M" id="TFz-0Z-dWH"/>
+                <outlet property="backgroundView" destination="agx-nf-j3f" id="myY-pq-hEK"/>
+                <outlet property="bottomConstrainBackgroundButton" destination="Wcd-zj-65X" id="jhs-76-C7p"/>
+                <outlet property="tapGesture" destination="aDs-Q3-OIs" id="SMd-bj-QRi"/>
+            </connections>
+            <point key="canvasLocation" x="-113.04347826086958" y="-308.03571428571428"/>
+        </view>
+        <tapGestureRecognizer id="aDs-Q3-OIs">
+            <connections>
+                <action selector="tapGesture:" destination="iN0-l3-epB" id="73l-nb-wLQ"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>
